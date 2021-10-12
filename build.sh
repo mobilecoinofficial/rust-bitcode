@@ -27,7 +27,7 @@ fi
 cd "$WORKING_DIR/llvm-project"
 git reset --hard
 git clean -f
-git checkout "$LLVM_BRANCH"
+git checkout -f "$LLVM_BRANCH"
 git apply ../../patches/llvm-system-libs.patch
 cd ..
 
@@ -44,7 +44,7 @@ fi
 cd rust
 git reset --hard
 git clean -f
-git checkout "$RUST_BRANCH"
+git checkout -f "$RUST_BRANCH"
 cd ..
 mkdir -p rust-build
 cd rust-build
