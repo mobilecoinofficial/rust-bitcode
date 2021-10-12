@@ -3,14 +3,18 @@
 # returned by the command below:
 # $ xcrun -sdk iphoneos swiftc --version
 
-LLVM_BRANCH="tags/swift-5.4.2-RELEASE"
+LLVM_BRANCH_TAG="5.4.2"
+LLVM_BRANCH="tags/swift-$LLVM_BRANCH_TAG-RELEASE"
 
 # 2. Select the best branch, tag or commit hash from https://github.com/rust-lang/rust
 
-RUST_BRANCH="f63ec777bcfdedb752f55ac676ac0724c6cef47e" # nightly-2021-07-25
+RUST_BRANCH_TAG="nightly-2021-07-25"
+RUST_BRANCH="f63ec777bcfdedb752f55ac676ac0724c6cef47e"
 
 # 3. Select a name for the toolchain you want to install as. The toolchain will be installed
 # under $HOME/.rustup/toolchains/rust-$RUST_TOOLCHAIN
 
-RUST_TOOLCHAIN="ios-arm64-nightly-2021-07-25-swift-5-4-2"
+#BUILD_TARGET="aarch64-apple-ios"
+BUILD_TARGET="x86_64-apple-ios"
+RUST_TOOLCHAIN="ios-$BUILD_TARGET-$RUST_BRANCH_TAG-swift-${LLVM_BRANCH_TAG//./-}"
 
