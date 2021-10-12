@@ -8,8 +8,8 @@ LLVM_BRANCH="tags/swift-$LLVM_BRANCH_TAG-RELEASE"
 
 # 2. Select the best branch, tag or commit hash from https://github.com/rust-lang/rust
 
-RUST_BRANCH_TAG="nightly-2021-07-25"
-RUST_BRANCH="f63ec777bcfdedb752f55ac676ac0724c6cef47e"
+RUST_BRANCH_TAG="nightly-2021-10-05"
+RUST_BRANCH="a804c4b1123ae665a8d4f726524109c49efac5b6"
 
 # 3. Select a name for the toolchain you want to install as. The toolchain will be installed
 # under $HOME/.rustup/toolchains/rust-$RUST_TOOLCHAIN
