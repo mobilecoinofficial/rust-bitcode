@@ -28,7 +28,7 @@ cd "$WORKING_DIR/llvm-project"
 git reset --hard
 git clean -f
 git checkout -f "$LLVM_BRANCH"
-#git apply ../../patches/llvm-system-libs.patch
+git apply ../../patches/llvm-system-libs.patch
 cd ..
 
 mkdir -p llvm-build
