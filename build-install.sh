@@ -66,7 +66,7 @@ export LLVM_BRANCH="swift-$LLVM_SWIFT_VERSION-RELEASE"
 export RUST_TOOLCHAIN="ios-$BUILD_TARGET-$RUST_COMMIT_NAME-swift-${LLVM_SWIFT_VERSION//./-}"
 
 # call build script to checkout & compile rust with LLVM
-build.sh
+./build.sh
 
 # install in $HOME directory
-install.sh
+./install.sh
