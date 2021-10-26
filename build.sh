@@ -47,7 +47,15 @@ cd ..
 mkdir -p rust-build
 cd rust-build
 ../rust/configure --llvm-config="$WORKING_DIR/llvm-root/bin/llvm-config" --target=$BUILD_TARGET --enable-extended --tools=cargo --release-channel=nightly
-export CFLAGS_${BUILD_TARGET//-/_}=-fembed-bitcode
+
+# Intel Apple Mac build-target cannot have embedded bitcode.
+INTEL_MAC_BUILD_TARGET="x86_64-apple-darwin"
+if [ $BUILD_TARGET != $INTEL_MAC_BUILD_TARGET ]; then
+  export CFLAGS_${BUILD_TARGET//-/_}=-fembed-bitcode
+else 
+  export CFLAGS_${BUILD_TARGET//-/_}=""
+fi 
+
 python "$WORKING_DIR/rust/x.py" build --stage 2 -v 
 
 echo "rust-bitcode build.sh finished"
