@@ -19,7 +19,7 @@ if ! brew list llvm > /dev/null 2>&1; then
     exit 1
 fi
 
-export LIBCLANG_PATH=$(brew --prefix llvm)/lib
+#export LIBCLANG_PATH=$(brew --prefix llvm)/lib
 
 
 WORKING_DIR="$(pwd)/build"
