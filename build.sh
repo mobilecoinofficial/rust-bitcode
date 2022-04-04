@@ -14,10 +14,10 @@ if ! which cmake; then
     echo "cmake not found. Try: brew install cmake"
     exit 1
 fi
-if ! brew list llvm > /dev/null 2>&1; then
-    echo "ERROR: llvm installed with brew is required. do: brew install llvm";
-    exit 1
-fi
+#if ! brew list llvm > /dev/null 2>&1; then
+    #echo "ERROR: llvm installed with brew is required. do: brew install llvm";
+    #exit 1
+#fi
 
 #export LIBCLANG_PATH=$(brew --prefix llvm)/lib
 
