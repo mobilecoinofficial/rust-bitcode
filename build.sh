@@ -53,7 +53,7 @@ git checkout -f "$RUST_COMMIT"
 cd ..
 mkdir -p rust-build
 cd rust-build
-../rust/configure --llvm-config="$WORKING_DIR/llvm-root/bin/llvm-config" --target=$BUILD_TARGET --enable-extended --tools=cargo --release-channel=nightly
+../rust/configure --llvm-config="$WORKING_DIR/llvm-root/bin/llvm-config" --target=$BUILD_TARGET --enable-extended --tools=cargo --release-channel=nightly --set rust.jemalloc
 
 # Intel Apple Mac build-target cannot have embedded bitcode.
 INTEL_MAC_BUILD_TARGET="x86_64-apple-darwin"
